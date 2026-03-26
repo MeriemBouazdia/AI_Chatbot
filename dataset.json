@@ -1,0 +1,331 @@
+{
+  "intents": [
+    {
+      "id": "greeting",
+      "questions": [
+        "Hello",
+        "Hi there",
+        "Welcome",
+        "Hey how are you",
+        "Good morning",
+        "Good evening",
+        "Greetings",
+        "Hello there",
+        "What's up",
+        "Hey",
+        "hi",
+        "Hello everyone"
+      ],
+      "responses": [
+        {
+          "answer": "🌱 Hello! Welcome to the Smart Greenhouse Bot! How can I help you today?"
+        },
+        {
+          "answer": "👋 Hi there! Great to see you! Do you need help with gardening or greenhouse monitoring?"
+        },
+        {
+          "answer": "Hello and welcome! 🌿 Your farming assistant is here! Ask me about plants or environmental conditions"
+        }
+      ]
+    },
+    {
+      "id": "temperature",
+      "questions": [
+        "What is the temperature",
+        "What's the current temperature",
+        "Temperature",
+        "How hot is it",
+        "Is it hot",
+        "How is the temperature",
+        "How's the heat",
+        "Current temperature",
+        "Temperature now",
+        "How many degrees"
+      ],
+      "responses": [
+        {
+          "answer": "🌡️ The current temperature in the greenhouse is {temperature}°C."
+        },
+        {
+          "answer": "The temperature is {temperature}°C. If it goes above 30°C, we need to open the windows! 🌬️"
+        },
+        {
+          "answer": "Currently: {temperature}°C. The ideal temperature for plants is between 20-25°C 🌡️"
+        }
+      ]
+    },
+    {
+      "id": "humidity",
+      "questions": [
+        "What is the humidity",
+        "What's the air humidity",
+        "Humidity",
+        "What is the humidity level",
+        "Is the air humid",
+        "Is there humidity",
+        "How much humidity",
+        "Humidity percentage",
+        "Air moisture",
+        "Current humidity"
+      ],
+      "responses": [
+        {
+          "answer": "💧 The current humidity level is {humidity}%. Plants like humidity between 60-80% 🌱"
+        },
+        {
+          "answer": "Air humidity is {humidity}%! If it's below 50%, we need to increase watering 💦"
+        },
+        {
+          "answer": "Status: {humidity}% humidity. This is good for growth! 💧"
+        }
+      ]
+    },
+    {
+      "id": "light_intensity",
+      "questions": [
+        "How much light",
+        "What's the light",
+        "Light intensity",
+        "Is there enough light",
+        "How is the lighting",
+        "Light level",
+        "Is the light adequate",
+        "How much light is there",
+        "Light strength",
+        "Intensity of light",
+        "Brightness"
+      ],
+      "responses": [
+        {
+          "answer": "☀️ The current light intensity is {light} lux. Plants need 10000-30000 lux for good growth 🌿"
+        },
+        {
+          "answer": "Light is at {light} lux. If it's below 10000, we need to add artificial light 💡"
+        },
+        {
+          "answer": "Light status: {light} lux ☀️ This is excellent for growth! Need more?"
+        }
+      ]
+    },
+    {
+      "id": "soil_moisture",
+      "questions": [
+        "What is soil moisture",
+        "What's the soil moisture",
+        "Soil moisture",
+        "Is the soil wet",
+        "How much moisture in soil",
+        "How is the soil",
+        "Is the ground wet",
+        "Moisture level in soil",
+        "Soil wetness",
+        "Water level in soil"
+      ],
+      "responses": [
+        {
+          "answer": "💧 The current soil moisture is {soil}%. The ideal range is between 40-60% 🌱"
+        },
+        {
+          "answer": "The soil has {soil}% moisture. If it's below 40%, we need to water more! 💦"
+        },
+        {
+          "answer": "Soil status: {soil}% moisture. This is good! 🌿"
+        }
+      ]
+    },
+    {
+      "id": "irrigation",
+      "questions": [
+        "When should we water",
+        "When to water",
+        "When to irrigate",
+        "Irrigation time",
+        "Need to water",
+        "Does it need watering",
+        "When do we water",
+        "When was last watering",
+        "Last watering",
+        "Watering schedule",
+        "Irrigation schedule"
+      ],
+      "responses": [
+        {
+          "answer": "💦 Watering is best done every 2-3 days depending on the weather! Make sure the soil is slightly dry before watering 🌱"
+        },
+        {
+          "answer": "For watering plants, do it at dawn or evening! Avoid watering at midday ☀️💧"
+        },
+        {
+          "answer": "Plants need watering when soil moisture is below 40%! Use drip irrigation system 💧🌿"
+        },
+        {
+          "answer": "Ideal schedule: water every 2 days in summer, and every 4-5 days in winter ❄️💦"
+        }
+      ]
+    },
+    {
+      "id": "general_advice",
+      "questions": [
+        "Farming tips",
+        "Any tips",
+        "Agricultural advice",
+        "How to care for plants",
+        "Plant advice",
+        "General advice",
+        "I need advice",
+        "What do you recommend",
+        "What's best",
+        "Garden tips",
+        "Growing advice"
+      ],
+      "responses": [
+        {
+          "answer": "🌱 Important tips:\n•Monitor temperature and humidity daily\n•Ensure good ventilation\n•Use fertilizer monthly\n•Check plants regularly for pests 🐛"
+        },
+        {
+          "answer": "💡 For farming success:\n1. Choose a sunny location\n2. Prepare the soil before planting\n3. Water regularly but don't overwater\n4. Add organic fertilizer 🌿"
+        },
+        {
+          "answer": "My advice to you:\n•Monitor weather constantly\n•Don't overwater 💧\n•Use mulch to protect soil\n•Harvest at the right time! 🌾"
+        },
+        {
+          "answer": "The most important thing: love and patience! 🌱 Plants feel the care. Tend to them and they will bear fruit! 🍅🥕"
+        }
+      ]
+    },
+    {
+      "id": "tomato_info",
+      "questions": [
+        "Information about tomatoes",
+        "Tomatoes",
+        "How to grow tomatoes",
+        "Tomato growing",
+        "Tell me about tomatoes",
+        "Tomato care",
+        "I need tomato information",
+        "Tomato conditions",
+        "What do tomatoes need",
+        "Tomato requirements",
+        "Growing tomatoes"
+      ],
+      "responses": [
+        {
+          "answer": "🍅 Tomato information:\n•Ideal temperature: 20-25°C\n•Soil moisture: 50-70%\n•Light: 6-8 hours of direct sunlight\n•Watering: regular but not excessive 💧"
+        },
+        {
+          "answer": "Tomato tips:\n•Plant in soil rich in fertilizer\n•Keep 60-70cm distance between seedlings\n•Tie plants for support\n•Harvest when color turns red! 🌿🔴"
+        },
+        {
+          "answer": "Tomatoes need:\n☀️ Full sun\n💧 Regular watering\n🌡️ Warm temperature\n🪴 Space to grow\nHarvest when fruit is firm and red! 🍅"
+        },
+        {
+          "answer": "Problem symptoms:\n•Yellow, wilted leaves = too much water\n•Cracked fruits = irregular watering\n•Pale leaves = needs fertilizer! 🌱"
+        }
+      ]
+    },
+    {
+      "id": "pepper_info",
+      "questions": [
+        "Information about peppers",
+        "Peppers",
+        "How to grow peppers",
+        "Pepper growing",
+        "Tell me about peppers",
+        "Pepper care",
+        "I need pepper information",
+        "Pepper conditions",
+        "What do peppers need",
+        "Pepper requirements",
+        "Growing peppers"
+      ],
+      "responses": [
+        {
+          "answer": "🌶️ Pepper information:\n•Ideal temperature: 25-30°C\n•Soil moisture: 60-70%\n•Light: full sun\n•Watering: moderate and regular 💧"
+        },
+        {
+          "answer": "Pepper tips:\n•Plant in sunny, wind-protected location\n•Add potassium-rich fertilizer\n•Harvest when fruit is firm\n•Hot peppers need higher temperature! 🌡️🌶️"
+        },
+        {
+          "answer": "Peppers need:\n☀️ High temperature 25-30°C\n💧 Good humidity\n🌱 Well-draining soil\n🪴 Large pots for growth\nHarvest at maturity! 🌶️"
+        },
+        {
+          "answer": "Pepper problems:\n•Purple leaves = too cold\n•Small fruits = needs fertilizer\n•Flower drop = water stress\nCheck these signs! 🌿"
+        }
+      ]
+    },
+    {
+      "id": "plant_diseases",
+      "questions": [
+        "Plant disease",
+        "What's on the leaves",
+        "Plant diseases",
+        "Yellow leaves",
+        "Brown spots",
+        "What are these symptoms",
+        "Sick plant",
+        "How to treat",
+        "Treatment",
+        "Plant problem",
+        "Leaf problems"
+      ],
+      "responses": [
+        {
+          "answer": "🩹 Initial diagnosis:\n\n🔴 Brown spots on leaves = fungus\nSolution: Remove diseased leaves and spray fungicide\n\n🟡 Yellow leaves = nutrient deficiency or overwatering\nSolution: Check watering and add fertilizer\n\n⚪ White spots = powdery mildew\nSolution: Better ventilation and fungicide 🌿"
+        },
+        {
+          "answer": "🤒 Common symptoms and treatment:\n\n•Wilted leaves = Thirsty! 💧 Add water\n•Pale leaves = Needs Nitrogen! 🌱 Add fertilizer\n•Black spots = Root rot = Reduce watering\n•Drooping = Too hot = Ventilate! 🌬️"
+        },
+        {
+          "answer": "Prevention is better than cure! 🛡️\n\n✅ Good ventilation\n✅ Don't overwater\n✅ Inspect plants daily\n✅ Use clean pots\n✅ Use sterile soil\n✅ Monitor for early disease signs! 🌱"
+        },
+        {
+          "answer": "For common diseases:\n\n🍂 Root rot: Reduce water and ensure drainage\n🦟 Aphids: Spray soap or insecticidal soap\n🍄 Fungi: Fungicides\n🦠 Wilt: Remove infected plant!\n\nConsult an expert if it persists! 👨‍🌾"
+        }
+      ]
+    },
+    {
+      "id": "help",
+      "questions": [
+        "How can you help me",
+        "What can you do",
+        "What are your capabilities",
+        "How do you help",
+        "Help me please",
+        "What services",
+        "What can I ask",
+        "Available commands",
+        "What do you offer",
+        "Help"
+      ],
+      "responses": [
+        {
+          "answer": "🤖 I'm the Smart Greenhouse Bot! I can help you with:\n\n🌡️ Temperature readings\n💧 Humidity monitoring\n☀️ Light checking\n💧 Soil moisture testing\n🌱 Farming advice\n🍅 Tomato and pepper information\n🔍 Disease diagnosis\n\nAsk me anything! 🌿"
+        },
+        {
+          "answer": "Here's what I can do:\n\n1️⃣ Query environmental conditions\n2️⃣ Watering and fertilizer tips\n3️⃣ Plant information\n4️⃣ Problem diagnosis\n5️⃣ Planting schedule\n\nJust ask! 💡"
+        },
+        {
+          "answer": "Hello! I'm your smart farming assistant 🌱\n\n📊 I can:\n•Give you sensor readings\n•Tips for successful growth\n•Watering and fertilizer guidance\n•Crop information\n•Disease diagnosis help\n\nWhat would you like to know? 💬"
+        }
+      ]
+    },
+    {
+      "id": "fallback",
+      "questions": [],
+      "responses": [
+        {
+          "answer": "😅 Sorry, I didn't understand your question! 💭\n\nTry:\n•Asking about temperature or humidity\n•Requesting farming tips\n•Asking about tomatoes or peppers\n•Say help for assistance! 🌱"
+        },
+        {
+          "answer": "🤔 I'm not sure what you mean! 😕\n\nI can help you with:\n•🌡️ Temperature\n•💧 Humidity\n•☀️ Light\n•💧 Soil moisture\n•🌱 General tips\n\nAsk in a different way! 💬"
+        },
+        {
+          "answer": "😇 My apologies! Please be more specific\n\nFor example:\n•What's the temperature\n•Give me a tip\n•What do tomatoes need\n•What do yellow leaves mean\n\nI'm here to help! 🌿"
+        },
+        {
+          "answer": "📚 Unknown question! ❓\n\nAsk about:\n→Environmental conditions temperature, humidity, light\n→Watering and fertilizer tips\n→Crop information\n→Disease diagnosis\n→Commands: help or assistance\n\nTry again! 💪"
+        }
+      ]
+    }
+  ]
+}
