@@ -60,18 +60,18 @@ def chat_route():
 
         sensor_data = data.get("sensor_data", simulate_sensor_data())
 
-        # Detect user language
+        # y3rf user language
         detected_lang = (detect_language(user_input) or 'en')[:2]
         if detected_lang not in ['en', 'fr', 'ar']:
             detected_lang = 'en'
 
-        # Translate input to English if needed
+       
         english_input = translate_to_english(user_input) if detected_lang != 'en' else user_input
 
-        # Get chatbot response in English
+      
         response, intent, confidence, _ = chatbot.chat(english_input, **sensor_data)
 
-        # Translate response back only if user language is not English
+        
         final_response = translate_from_english(response, detected_lang) if detected_lang != 'en' else response
 
         return jsonify({
@@ -91,6 +91,5 @@ def health():
     return jsonify({"status": "ok", "message": "Smart Greenhouse Chatbot is running"})
 
 
-# Run Flask
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)

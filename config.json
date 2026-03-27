@@ -1,100 +1,98 @@
 {
   "max_length": 50,
-  "num_classes": 12,
+  "num_classes": 11,
   "intent_to_idx": {
-    "greeting": 0,
-    "general_advice": 1,
-    "irrigation": 2,
-    "temperature": 3,
-    "tomato_info": 4,
-    "humidity": 5,
-    "help": 6,
-    "pepper_info": 7,
-    "light_intensity": 8,
-    "plant_diseases": 9,
-    "soil_moisture": 10,
-    "fallback": 11
+    "general_advice": 0,
+    "greeting": 1,
+    "help": 2,
+    "humidity": 3,
+    "irrigation": 4,
+    "light_intensity": 5,
+    "pepper_info": 6,
+    "plant_diseases": 7,
+    "soil_moisture": 8,
+    "temperature": 9,
+    "tomato_info": 10
   },
   "idx_to_intent": {
-    "0": "greeting",
-    "1": "general_advice",
-    "2": "irrigation",
-    "3": "temperature",
-    "4": "tomato_info",
-    "5": "humidity",
-    "6": "help",
-    "7": "pepper_info",
-    "8": "light_intensity",
-    "9": "plant_diseases",
-    "10": "soil_moisture",
-    "11": "fallback"
+    "0": "general_advice",
+    "1": "greeting",
+    "2": "help",
+    "3": "humidity",
+    "4": "irrigation",
+    "5": "light_intensity",
+    "6": "pepper_info",
+    "7": "plant_diseases",
+    "8": "soil_moisture",
+    "9": "temperature",
+    "10": "tomato_info"
   },
   "responses": [
     [
-      "🌱 وعليكم السلام! أهلاً وسهلاً بك في بوت الدفيئة الذكية! كيف يمكنني مساعدتك اليوم؟",
-      "👋 مرحبا! سعيد برؤيتك! هل تحتاج مساعدة في الزراعة أو مراقبة الدفيئة؟",
-      "أهلا وسهلا! 🌿 بوتك الزراعي في الخدمة! اسألني عن النباتات أو الظروف البيئية"
+      "🌱 Hello! Welcome to the Smart Greenhouse Bot! How can I help you today?",
+      "👋 Hi there! Great to see you! Do you need help with gardening or greenhouse monitoring?",
+      "Hello and welcome! 🌿 Your farming assistant is here! Ask me about plants or environmental conditions"
     ],
     [
-      "🌡️ درجة الحرارة الحالية في الدفيئة هي {temperature}°C.",
-      "الحراراة عندنا {temperature}°C. إذا زادت عن 30°C، لازم نفتح الشبابيك! 🌬️",
-      "في الوقت الحالي: {temperature}°C. الحرارة المثالية للنباتات بين 20-25°C 🌡️"
+      "🌡️ The current temperature in the greenhouse is {temperature}°C.",
+      "The temperature is {temperature}°C. If it goes above 30°C, we need to open the windows! 🌬️",
+      "Currently: {temperature}°C. The ideal temperature for plants is between 20-25°C 🌡️"
     ],
     [
-      "💧 نسبة الرطوبة الحالية هي {humidity}%. النباتات تحب رطوبة بين 60-80% 🌱",
-      "رطوبة الجو {humidity}%! إذا低于 50%، لازم نزيدوا الري 💦",
-      "الحالة: {humidity}% رطوبة. هذا جيد للنمو! 💧"
+      "💧 The current humidity level is {humidity}%. Plants like humidity between 60-80% 🌱",
+      "Air humidity is {humidity}%! If it's below 50%, we need to increase watering 💦",
+      "Status: {humidity}% humidity. This is good for growth! 💧"
     ],
     [
-      "☀️ شدة الإضاءة الحالية هي {light} lux. النباتات تحتاج 10000-30000 lux للنمو الجيد 🌿",
-      "الإضاءة عندي {light} lux. إذاقلة عن 10000، لازم نضيفوا ضوء صناعي 💡",
-      "حالة الإضاءة: {light} lux ☀️ هذا ممتاز للنمو! تحتاج أكثر؟"
+      "☀️ The current light intensity is {light} lux. Plants need 10000-30000 lux for good growth 🌿",
+      "Light is at {light} lux. If it's below 10000, we need to add artificial light 💡",
+      "Light status: {light} lux ☀️ This is excellent for growth! Need more?"
     ],
     [
-      "💧 رطوبة التربة الحالية هي {soil}%. المقياس المثالي بين 40-60% 🌱",
-      "التربة فيها {soil}% رطوبة. إذاقلة عن 40%، لازم نزيدوا الري! 💦",
-      "حالة التربة: {soil}% رطوبة. هذا جيد! 🌿"
+      "💧 The current soil moisture is {soil}%. The ideal range is between 40-60% 🌱",
+      "The soil has {soil}% moisture. If it's below 40%, we need to water more! 💦",
+      "Soil status: {soil}% moisture. This is good! 🌿"
     ],
     [
-      "💦 الري يفضل يكون كل 2-3 أيام حسب الطقس! تأكد أن التربة جافة شوية قبل الري 🌱",
-      "لري المزروعين، خذ وقت الفجر أو المساء! تجنب الري في وقت الظهيرة ☀️💧",
-      "النباتات تحتاج ري عندما تكون رطوبة التربة أقل من 40%! استخدم نظام الري بالتنقيط 💧🌿",
-      "الجدول المثالي: ري كل يومين في الصيف، وكل 4-5 أيام في الشتاء ❄️💦"
+      "💦 Watering is best done every 2-3 days depending on the weather! Make sure the soil is slightly dry before watering 🌱",
+      "For watering plants, do it at dawn or evening! Avoid watering at midday ☀️💧",
+      "Plants need watering when soil moisture is below 40%! Use drip irrigation system 💧🌿",
+      "Ideal schedule: water every 2 days in summer, and every 4-5 days in winter ❄️💦"
     ],
     [
-      "🌱 نصائح مهمة:\n•راقب درجة الحرارة والرطوبة daily\n•تأكد من التهوية الجيدة\n•استخدم السماد每个月\n•تفقد النباتات بانتظام للآفات 🐛",
-      "💡 للنجاح في الزراعة:\n1. اختر المكان المشمس\n2. prepare التربة قبل الزراعة\n3. Water بانتظام لكن بدون إفراط\n4. أضف السماد العضوي 🌿",
-      "نصيحتي لك:\n•راقب أحوال الطقس constantly\n•لا تفرط في الري 💧\n•استخدم المهاد لحماية التربة\n• Harvest في الوقت المناسب! 🌾",
-      "أهم شيء: الحب والصبر! 🌱 النباتات تشعر بالاهتمام. رعها وسوف تثمر! 🍅🥕"
+      "🌱 Important tips:\n•Monitor temperature and humidity daily\n•Ensure good ventilation\n•Use fertilizer monthly\n•Check plants regularly for pests 🐛",
+      "💡 For farming success:\n1. Choose a sunny location\n2. Prepare the soil before planting\n3. Water regularly but don't overwater\n4. Add organic fertilizer 🌿",
+      "My advice to you:\n•Monitor weather constantly\n•Don't overwater 💧\n•Use mulch to protect soil\n•Harvest at the right time! 🌾",
+      "The most important thing: love and patience! 🌱 Plants feel the care. Tend to them and they will bear fruit! 🍅🥕"
     ],
     [
-      "🍅 معلومات الطماطم:\n•الحرارة المثالية: 20-25°C\n•رطوبة التربة: 50-70%\n•الإضاءة: 6-8 ساعات شمس مباشر\n•الري: منتظم بدون إفراط 💧",
-      "نصائح الطماطم:\n•ازرع في تربة غنية بالسماد\n•أبق على مسافة 60-70cm بين الشتلات\n•اربط النباتات للدعم\n• جني عندما يتحول اللون للأحمر! 🌿🔴",
-      "الطماطم تحتاج:\n☀️ شمس كاملة\n💧 ري منتظم\n🌡️ حرارة دافئة\n🪴 مساحة للنمو\nجني عندما يكون الثمر صلب وأحمر! 🍅",
-      "أعراض المشاكل:\n•أوراق صفراء وذابلة =太多的水分\n•ثمار متشققة = ري غير منتظم\n•أوراق شاحبة = يحتاج سماد! 🌱"
+      "🍅 Tomato information:\n•Ideal temperature: 20-25°C\n•Soil moisture: 50-70%\n•Light: 6-8 hours of direct sunlight\n•Watering: regular but not excessive 💧",
+      "Tomato tips:\n•Plant in soil rich in fertilizer\n•Keep 60-70cm distance between seedlings\n•Tie plants for support\n•Harvest when color turns red! 🌿🔴",
+      "Tomatoes need:\n☀️ Full sun\n💧 Regular watering\n🌡️ Warm temperature\n🪴 Space to grow\nHarvest when fruit is firm and red! 🍅",
+      "Problem symptoms:\n•Yellow, wilted leaves = too much water\n•Cracked fruits = irregular watering\n•Pale leaves = needs fertilizer! 🌱"
     ],
     [
-      "🌶️ معلومات الفليفلة:\n•الحرارة المثالية: 25-30°C\n•رطوبة التربة: 60-70%\n•الإضاءة: شمس كامل\n•الري: معتدل ومنتظم 💧",
-      "نصائح الفليفلة:\n•ازرع في مكان مشمس ومحمي من الرياح\n•أضف سماد غني بالبوتاسيوم\n•احصد عندما يصبح الثمر firm\n• الفلفلة الحارة تحتاج حرارة أعلى! 🌡️🌶️",
-      "الفلفل يحتاج:\n☀️ حرارة عالية 25-30°C\n💧 رطوبة جيدة\n🌱 تربة جيدة التصريف\n🪴 أصص كبيرة للنمو\nحصد عند النضج! 🌶️",
-      "مشاكل الفليفلة:\n•أوراق بنفسجية = باردة جداً\n•ثمار صغيرة = يحتاج سماد\n•تساقط الأزهار = إجهاد مائي\nراجع هذه العلامات! 🌿"
+      "🌶️ Pepper information:\n•Ideal temperature: 25-30°C\n•Soil moisture: 60-70%\n•Light: full sun\n•Watering: moderate and regular 💧",
+      "Pepper tips:\n•Plant in sunny, wind-protected location\n•Add potassium-rich fertilizer\n•Harvest when fruit is firm\n•Hot peppers need higher temperature! 🌡️🌶️",
+      "Peppers need:\n☀️ High temperature 25-30°C\n💧 Good humidity\n🌱 Well-draining soil\n🪴 Large pots for growth\nHarvest at maturity! 🌶️",
+      "Pepper problems:\n•Purple leaves = too cold\n•Small fruits = needs fertilizer\n•Flower drop = water stress\nCheck these signs! 🌿"
     ],
     [
-      "🩹 التشخيص الأولي:\n\n🔴 بقع بنية على الأوراق = فطر\nالحل: إزالة الأوراق المريضة ورش مبيد فطري\n\n🟡 أوراق صفراء = نقص مغذيات أو ري excess\nالحل: راجع الري وأضف سماد\n\n⚪ بقع بيضاء = البياض الدقيقي\nالحل: تهوية أفضل ومبيد فطري 🌿",
-      "🤒 أعراض شائعة وعلاجها:\n\n•أوراق ذابلة = العطش! 💧 أضف ري\n•أوراق شاحبة = يحتاج Nitrogen! 🌱 أضف سماد\n•بقع سوداء = تعفن جذور = قلل الري\n•تذبل = حرارة过高 = تهوية! 🌬️",
-      "الوقاية أفضل من العلاج! 🛡️\n\n✅ تهوية جيدة\n✅ لا تفرط في الري\n✅ افحص النباتات daily\n✅ ازرع بأصص نظيفة\n✅ استخدم تربة معقمة\n✅ راقب علامات المرض مبكراً! 🌱",
-      "للأمراض الشائعة:\n\n🍂 تعفن الجذور: قلل الماء وتأكد التصريف\n🦟 المنّ حشرات: رشصابون أو صابون\n🍄 فطريات: المبيدات الفطرية\n🦠 ذبول: إزالة النبات المصاب!\n\nاستشر خبير إذا استمر! 👨‍🌾"
+      "🩹 Initial diagnosis:\n\n🔴 Brown spots on leaves = fungus\nSolution: Remove diseased leaves and spray fungicide\n\n🟡 Yellow leaves = nutrient deficiency or overwatering\nSolution: Check watering and add fertilizer\n\n⚪ White spots = powdery mildew\nSolution: Better ventilation and fungicide 🌿",
+      "🤒 Common symptoms and treatment:\n\n•Wilted leaves = Thirsty! 💧 Add water\n•Pale leaves = Needs Nitrogen! 🌱 Add fertilizer\n•Black spots = Root rot = Reduce watering\n•Drooping = Too hot = Ventilate! 🌬️",
+      "Prevention is better than cure! 🛡️\n\n✅ Good ventilation\n✅ Don't overwater\n✅ Inspect plants daily\n✅ Use clean pots\n✅ Use sterile soil\n✅ Monitor for early disease signs! 🌱",
+      "For common diseases:\n\n🍂 Root rot: Reduce water and ensure drainage\n🦟 Aphids: Spray soap or insecticidal soap\n🍄 Fungi: Fungicides\n🦠 Wilt: Remove infected plant!\n\nConsult an expert if it persists! 👨‍🌾"
     ],
     [
-      "🤖 أنا بوت الدفيئة الذكية! يمكنني helping you in:\n\n🌡️ قياس درجة الحرارة\n💧 مراقبة الرطوبة\n☀️ التحقق من الإضاءة\n💧 فحص رطوبة التربة\n🌱 نصائح للزراعة\n🍅 معلومات الطماطم والفليفلة\n🔍 تشخيص الأمراض\n\n إسألني أي شيء! 🌿",
-      "إليك ما يمكنني делать:\n\n1️⃣ استعلام عن الظروف البيئية\n2️⃣ نصائح للري والتسميد\n3️⃣ معلومات عن النباتات\n4️⃣ تشخيص المشاكل\n5️⃣ جدول الزراعة\n\nفقط اسأل! 💡",
-      "مرحبا! أنا مساعدك الزراعي الذكي 🌱\n\n📊 يمكنني:\n•إعطائك قراءات المستشعرات\n•نصائح للنمو الناجح\n•إرشادات للري والتسميد\n•معلومات عن المحاصيل\n•مساعدة في تشخيص الأمراض\n\nما الذي تريد معرفته؟ 💬"
+      "🤖 I'm the Smart Greenhouse Bot! I can help you with:\n\n🌡️ Temperature readings\n💧 Humidity monitoring\n☀️ Light checking\n💧 Soil moisture testing\n🌱 Farming advice\n🍅 Tomato and pepper information\n🔍 Disease diagnosis\n\nAsk me anything! 🌿",
+      "Here's what I can do:\n\n1️⃣ Query environmental conditions\n2️⃣ Watering and fertilizer tips\n3️⃣ Plant information\n4️⃣ Problem diagnosis\n5️⃣ Planting schedule\n\nJust ask! 💡",
+      "Hello! I'm your smart farming assistant 🌱\n\n📊 I can:\n•Give you sensor readings\n•Tips for successful growth\n•Watering and fertilizer guidance\n•Crop information\n•Disease diagnosis help\n\nWhat would you like to know? 💬"
     ],
     [
-      "😅 عذراً، لم أفهم سؤالك! 💭\n\nجرب:\n•اسأل عن الحرارة أو الرطوبة\n•اطلب نصائح للزراعة\n•اسأل عن الطماطم أو الفليفلة\n•قل help للمساعدة! 🌱",
-      "🤔 لست متأكد مما تقصد! 😕n\nيمكنني مساعدتك في:\n•🌡️ درجة الحرارة\n•💧 الرطوبة\n•☀️ الإضاءة\n•💧 رطوبة التربة\n•🌱 نصائح عامة\n\nاسأل بطريقة أخرى! 💬",
-      "😇 معك العذر! لازم توضح more detail\n\nمثلا:\n•كم الحرارة\n•أعطني نصيحة\n•أيش يحتاج طماطم\n•أوراق صفراء ماذا تعني\n\nأنا هنا للمساعدة! 🌿",
-      "📚 سؤال غير معروف! ❓\n\nاسأل عن:\n→الظروف البيئية حرارة، رطوبة، ضوء\n→نصائح للري والتسميد\n→معلومات عن المحاصيل\n→تشخيص الأمراض\n→أوامر: help or مساعدة\n\nحاول مرة أخرى! 💪"
+      "😅 Sorry, I didn't understand your question! 💭\n\nTry:\n•Asking about temperature or humidity\n•Requesting farming tips\n•Asking about tomatoes or peppers\n•Say help for assistance! 🌱",
+      "🤔 I'm not sure what you mean! 😕\n\nI can help you with:\n•🌡️ Temperature\n•💧 Humidity\n•☀️ Light\n•💧 Soil moisture\n•🌱 General tips\n\nAsk in a different way! 💬",
+      "😇 My apologies! Please be more specific\n\nFor example:\n•What's the temperature\n•Give me a tip\n•What do tomatoes need\n•What do yellow leaves mean\n\nI'm here to help! 🌿",
+      "📚 Unknown question! ❓\n\nAsk about:\n→Environmental conditions temperature, humidity, light\n→Watering and fertilizer tips\n→Crop information\n→Disease diagnosis\n→Commands: help or assistance\n\nTry again! 💪"
     ]
   ]
 }

@@ -5,17 +5,17 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from sklearn.model_selection import train_test_split
 
-# -----------------------------
+
 def normalize_text(text):
     """Normalize text: lowercase, remove punctuation, extra spaces."""
     if not isinstance(text, str):
         return ""
     text = text.lower()
-    text = re.sub(r'[^\w\s]', ' ', text)  # remove punctuation
-    text = re.sub(r'\s+', ' ', text).strip()  # remove extra spaces
+    text = re.sub(r'[^\w\s]', ' ', text) 
+    text = re.sub(r'\s+', ' ', text).strip()  
     return text
 
-# -----------------------------
+
 def load_dataset(filepath='dataset.json'):
     """Load dataset JSON and extract questions, intents, and responses."""
     with open(filepath, 'r', encoding='utf-8') as f:
@@ -34,7 +34,6 @@ def load_dataset(filepath='dataset.json'):
 
     return questions, intents, responses
 
-# -----------------------------
 def preprocess_dataset(filepath='dataset.json'):
     """Normalize questions and create mappings for intents."""
     questions, intents, responses = load_dataset(filepath)
@@ -56,21 +55,20 @@ def preprocess_dataset(filepath='dataset.json'):
         'num_classes': len(unique_intents)
     }
 
-# -----------------------------
+
 def create_tokenizer(questions, num_words=5000):
     """Fit a tokenizer on the questions."""
     tokenizer = Tokenizer(num_words=num_words, oov_token='<OOV>')
     tokenizer.fit_on_texts(questions)
     return tokenizer
 
-# -----------------------------
 def encode_sequences(tokenizer, questions, max_length=50):
     """Convert text questions to padded sequences of integers."""
     sequences = tokenizer.texts_to_sequences(questions)
     padded = pad_sequences(sequences, maxlen=max_length, padding='post', truncating='post')
     return padded
 
-# -----------------------------
+
 def prepare_training_data(data, max_length=50, test_size=0.2, random_state=42):
     """Prepare training and test datasets for model training."""
     tokenizer = create_tokenizer(data['questions'])
@@ -94,8 +92,7 @@ def prepare_training_data(data, max_length=50, test_size=0.2, random_state=42):
         'responses': data['responses']
     }
 
-# -----------------------------
-# Testing
+
 if __name__ == '__main__':
     test_texts = [
         "Hello, how are you?",
